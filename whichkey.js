@@ -1,20 +1,11 @@
-/*
- * Whichkey is a javascript tiny toolkit to identify
- * keystrokes coming from keydown and keyup events.
- * by Arthur Corenzan <arthur@corenzan.com>
- * licensed under http://creativecommons.org/licenses/by/3.0/
- * more on http://github.com/haggen/whichkey
- *
- * Examples:
- * if (whichkey(event).escape) {...}
- * if (whichkey(event).up) {...}
- */
+// whichkey - github.com/haggen/whichkey
+// Licensed under creativecommons.org/licenses/by-sa/4.0/
 
-(function(undefined) {
+;(function(undefined) {
 
-  var whichkey;
+  function whichkey(e) {
+    // console.log(e.which);
 
-  whichkey = function(e) {
     return {
       esc:          e.which === 27,
       escape:       e.which === 27,
@@ -25,7 +16,6 @@
       spacebar:     e.which === 32,
       enter:        e.which === 13,
       'return':     e.which === 13,
-      digit:       !e.shiftKey && e.which >= 48 && e.which <= 57,
       number:      !e.shiftKey && e.which >= 48 && e.which <= 57,
       numbers:     !e.shiftKey && e.which >= 48 && e.which <= 57,
       0:           !e.shiftKey && e.which === 48,
@@ -67,6 +57,7 @@
       w:            e.which === 89,
       z:            e.which === 90,
       arrow:        e.which >= 37 && e.which <= 40,
+      arrows:       e.which >= 37 && e.which <= 40,
       left:         e.which === 37,
       up:           e.which === 38,
       right:        e.which === 39,
@@ -75,7 +66,7 @@
   };
 
   if(typeof this.define === 'function' && 'amd' in this.define) {
-    this.define('whichkey', function() { return whichkey; });
+    this.define('whichkey', whichkey);
   } else {
     this.whichkey = whichkey;
   }

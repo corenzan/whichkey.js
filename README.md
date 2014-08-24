@@ -1,9 +1,12 @@
-Latest revision on 2012-10-09 11:37:11 -0300
------------------------------------------------
+# Whichkey
 
-**Whichkey** is a _work in progress_ of a javascript tiny toolkit to identify keystrokes coming from keydown and keyup events.
+> Ask keystrokes by name.
 
-Licensed under http://creativecommons.org/licenses/by/3.0/
+## About
+
+**Whichkey** simply translates keystrokes codes to names. Like when you want to know if a keystroke was any letter or a specific one, or if it was an arrow key, or anything else. You just ask by its name.
+
+## Usage
 
 Examples:
 
@@ -15,3 +18,29 @@ if (whichkey(event).a) {...}
 if (whichkey(event).arrow) {...}
 if (whichkey(event).down) {...}
 ```
+
+Complete list of acceptable queries:
+
+- `esc[ape]`
+- `tab`
+- `backspace`
+- `delete`
+- `space[bar]`
+- `enter | return`
+- `<any number>`
+- `number[s]`
+- `<any letter>`
+- `letter[s]`
+- `arrow[s]`
+- `left`
+- `up`
+- `right`
+- `down`
+
+## Contribute
+
+More queries will be added over time, but you can help by adding a couple yourself and sending a *Pull request*.
+
+## License
+
+See http://creativecommons.org/licenses/by-sa/4.0/
