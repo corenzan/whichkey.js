@@ -1,9 +1,12 @@
-// whichkey - github.com/haggen/whichkey
-// Licensed under creativecommons.org/licenses/by-sa/4.0/
+// Whichkey.js Wed Feb 25 11:54:26 BRT 2015
+// more on github.com/haggen/whichkey.js
+;(function(root) {
 
-;(function(undefined) {
+  'use strict';
 
-  function whichkey(e) {
+  var whichkey;
+
+  whichkey = function(e) {
     // console.log(e.which);
 
     return {
@@ -65,10 +68,6 @@
     };
   };
 
-  if(typeof this.define === 'function' && 'amd' in this.define) {
-    this.define('whichkey', whichkey);
-  } else {
-    this.whichkey = whichkey;
-  }
+  root.whichkey = whichkey;
 
-})();
+})(this);
