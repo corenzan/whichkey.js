@@ -1,10 +1,10 @@
-# Whichkey
+# Whichkey.js
 
 > Ask keystrokes by name.
 
 ## About
 
-**Whichkey** simply translates keystrokes codes to names. Like when you want to know if a keystroke was any letter or a specific one, or if it was an arrow key, or anything else. You just ask by its name.
+**Whichkey.js** simply translates keystroke codes to names. Like when you want to know if a keystroke was any letter or a specific one, or if it was an arrow key, or anything else; you simply ask it by its name.
 
 ## Usage
 
@@ -19,14 +19,14 @@ if (whichkey(event).arrow) {...}
 if (whichkey(event).down) {...}
 ```
 
-Complete list of acceptable queries:
+### Complete list of acceptable queries:
 
 - `esc[ape]`
 - `tab`
 - `backspace`
 - `delete`
 - `space[bar]`
-- `enter | return`
+- `enter|return`
 - `<any number>`
 - `number[s]`
 - `<any letter>`
@@ -39,8 +39,8 @@ Complete list of acceptable queries:
 
 ## Contribute
 
-More queries will be added over time, but you can help by adding a couple yourself and sending a *Pull request*.
+More queries will be added over time, but you can always help by adding a couple yourself and sending me a *Pull request*. Also feel free to contact me or open an issue.
 
 ## License
 
-See http://creativecommons.org/licenses/by-sa/4.0/
+See [Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
