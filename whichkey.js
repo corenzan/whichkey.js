@@ -19,6 +19,8 @@
       spacebar:     e.which === 32,
       enter:        e.which === 13,
       'return':     e.which === 13,
+      meta:         e.which === 91 || e.which === 93 || e.metaKey,
+      ctrl:         e.which === 17 || e.ctrlKey,
       number:      !e.shiftKey && e.which >= 48 && e.which <= 57,
       numbers:     !e.shiftKey && e.which >= 48 && e.which <= 57,
       0:           !e.shiftKey && e.which === 48,
@@ -64,7 +66,9 @@
       left:         e.which === 37,
       up:           e.which === 38,
       right:        e.which === 39,
-      down:         e.which === 40
+      down:         e.which === 40,
+      pageUp:       e.which === 33,
+      pageDown:     e.which === 34
     };
   };
 
