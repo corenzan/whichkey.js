@@ -68,7 +68,9 @@
       right:        e.which === 39,
       down:         e.which === 40,
       pageUp:       e.which === 33,
-      pageDown:     e.which === 34
+      pageDown:     e.which === 34,
+      home:         e.which === 36,
+      'end':        e.which === 35
     };
   };
 
