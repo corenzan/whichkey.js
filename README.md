@@ -4,22 +4,32 @@
 
 ## About
 
-**Whichkey.js** simply translates keystroke codes to names. Like when you want to know if a keystroke was any letter or a specific one, or if it was an arrow key, or anything else; you simply ask it by its name.
+**Whichkey.js** simply translates keystroke codes to readable names. Like when you want to know if a keystroke was any letter or a specific one, or if it was an arrow key, or anything else; you simply ask it by its name.
 
 ## Usage
 
-Examples:
+Simply wrap a `keypress`, `keyup` or `keydown` event in `whichkey()`, for instance:
 
-```javascript
-if (whichkey(event).escape) {...}
-if (whichkey(event).backspace) {...}
-if (whichkey(event).letter) {...}
-if (whichkey(event).a) {...}
-if (whichkey(event).arrow) {...}
-if (whichkey(event).down) {...}
+```js
+input.addEventListener('keydown', function(e) {
+  var key = whichkey(e);
+});
 ```
 
-### Complete list of acceptable queries:
+Then proceed to _ask_ which key was pressed. Like this:
+
+```javascript
+if (key.escape) {...}
+if (key.backspace) {...}
+if (key.letter) {...}
+if (key.a) {...}
+if (key.arrow) {...}
+if (key.down) {...}
+```
+
+### Supported keystrokes
+
+So far I've added the following queries:
 
 - `esc[ape]`
 - `tab`
@@ -36,11 +46,15 @@ if (whichkey(event).down) {...}
 - `up`
 - `right`
 - `down`
+- `home`
+- `end`
+- `pageUp`
+- `pageDown`
 
-## Contribute
+## Contribution
 
-More queries will be added over time, but you can always help by adding a couple yourself and sending me a *Pull request*. Also feel free to contact me or open an issue.
+More queries will be added over time, but you can always help by adding a couple yourself and submitting a *Pull request*.
 
 ## License
 
-See [Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+This project is licensed under [MIT](LICENSE).
