@@ -1,40 +1,47 @@
-// Whichkey.js Wed Feb 25 11:54:26 BRT 2015
-// more on github.com/haggen/whichkey.js
+// whichkey.js 1.0.6
+// More on https://github.com/corenzan/whichkey.js
 ;(function(root) {
-
   'use strict';
 
   var whichkey;
 
   whichkey = function(e) {
-    // console.log(e.which);
-
     return {
-      esc:          e.which === 27,
-      escape:       e.which === 27,
-      tab:          e.which === 9,
       backspace:    e.which === 8,
-      'delete':     e.which === 46,
-      space:        e.which === 32,
-      spacebar:     e.which === 32,
+      tab:          e.which === 9,
       enter:        e.which === 13,
       'return':     e.which === 13,
-      meta:         e.which === 91 || e.which === 93 || e.metaKey,
       ctrl:         e.which === 17 || e.ctrlKey,
-      number:      !e.shiftKey && e.which >= 48 && e.which <= 57,
-      numbers:     !e.shiftKey && e.which >= 48 && e.which <= 57,
-      0:           !e.shiftKey && e.which === 48,
-      1:           !e.shiftKey && e.which === 49,
-      2:           !e.shiftKey && e.which === 50,
-      3:           !e.shiftKey && e.which === 51,
-      4:           !e.shiftKey && e.which === 52,
-      5:           !e.shiftKey && e.which === 53,
-      6:           !e.shiftKey && e.which === 54,
-      7:           !e.shiftKey && e.which === 55,
-      8:           !e.shiftKey && e.which === 56,
-      9:           !e.shiftKey && e.which === 57,
-      letters:      e.which >= 65 && e.which <= 90,
-      letter:       e.which >= 65 && e.which <= 90,
+      esc:          e.which === 27,
+      escape:       e.which === 27,
+      space:        e.which === 32,
+      spacebar:     e.which === 32,
+      pageUp:       e.which === 33,
+      pageDown:     e.which === 34,
+      'end':        e.which === 35
+      home:         e.which === 36,
+      left:         e.which === 37,
+      arrow:        e.which  >= 37 && e.which <= 40,
+      arrows:       e.which  >= 37 && e.which <= 40,
+      up:           e.which === 38,
+      right:        e.which === 39,
+      down:         e.which === 40,
+      'delete':     e.which === 46,
+      meta:         e.which === 91 || e.which === 93 || e.metaKey,
+      number:       e.which  >= 48 && e.which <= 57 && !e.shiftKey,
+      numbers:      e.which  >= 48 && e.which <= 57 && !e.shiftKey,
+      0:            e.which === 48 && !e.shiftKey,
+      1:            e.which === 49 && !e.shiftKey,
+      2:            e.which === 50 && !e.shiftKey,
+      3:            e.which === 51 && !e.shiftKey,
+      4:            e.which === 52 && !e.shiftKey,
+      5:            e.which === 53 && !e.shiftKey,
+      6:            e.which === 54 && !e.shiftKey,
+      7:            e.which === 55 && !e.shiftKey,
+      8:            e.which === 56 && !e.shiftKey,
+      9:            e.which === 57 && !e.shiftKey,
+      letters:      e.which  >= 65 && e.which <= 90,
+      letter:       e.which  >= 65 && e.which <= 90,
       a:            e.which === 65,
       b:            e.which === 66,
       c:            e.which === 67,
@@ -61,19 +68,8 @@
       x:            e.which === 88,
       w:            e.which === 89,
       z:            e.which === 90,
-      arrow:        e.which >= 37 && e.which <= 40,
-      arrows:       e.which >= 37 && e.which <= 40,
-      left:         e.which === 37,
-      up:           e.which === 38,
-      right:        e.which === 39,
-      down:         e.which === 40,
-      pageUp:       e.which === 33,
-      pageDown:     e.which === 34,
-      home:         e.which === 36,
-      'end':        e.which === 35
     };
   };
 
   root.whichkey = whichkey;
-
 })(this);
