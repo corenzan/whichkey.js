@@ -18,7 +18,7 @@
       spacebar:     e.which === 32,
       pageUp:       e.which === 33,
       pageDown:     e.which === 34,
-      'end':        e.which === 35
+      'end':        e.which === 35,
       home:         e.which === 36,
       left:         e.which === 37,
       arrow:        e.which  >= 37 && e.which <= 40,
